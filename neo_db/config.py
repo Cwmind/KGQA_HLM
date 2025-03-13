@@ -1,8 +1,9 @@
 from py2neo import Graph
+
+# 使用 auth 参数传递用户名和密码
 graph = Graph(
-    "http://localhost:7474",
-    username="neo4j",
-    password="950302"
+    "bolt://localhost:7687",  # 连接地址
+    auth=("neo4j", "znq02288")  # 使用 auth 参数传递用户名和密码
 )
 CA_LIST = {"贾家荣国府":0,"贾家宁国府":1,"王家":2,"史家":3,"薛家":4,"其他":5,"林家":6}
 similar_words = {
